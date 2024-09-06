@@ -667,7 +667,7 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (amx-width: 300px){
+@media screen and (max-width: 300px){
   .container{
     margin-inline: 1rem;
   }
@@ -679,24 +679,30 @@ img {
 }
 
 .work__summary{
-  margin-left: 5%;
-  margin-right: 5%;
+  max-width: 90%;
   margin-bottom: 3rem;
-  text-align: justify;
+  margin-inline: auto;
 }
 
 /* For medium devices */
 @media screen and (min-width: 540px){
   .home__container,
-  .work__container,
+  .work__container,  
   .info__container,
   .services__container,
   .contact__container{
     grid-template-columns: 350px;
     justify-content: center;
+    margin-inline: 1rem;
   }
-}
 
+}
+.work__summary{
+  margin-bottom: 3rem;
+  margin-inline: auto;
+}  
+
+/* For screen between 539px and 768*/
 @media  screen and (min-width: 768px) {
   .nav__menu{
     width: 50%;
@@ -721,11 +727,10 @@ img {
   }
 
   .work__summary{
-    margin-left: 10%;
-    margin-right: 10%;
     margin-bottom: 3rem;
-    text-align: justify;
-  }
+    max-width: 715px;
+    margin-inline: auto;
+    }
 
   .info__container{
     grid-template-columns: initial;
@@ -741,7 +746,7 @@ img {
   }
 
   .experience__data{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);  
   }
 
   .skills__content{
@@ -751,7 +756,7 @@ img {
   }
 
   .services__container{
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 350px);
   }
 }
 /* For large devices */
@@ -812,11 +817,10 @@ img {
   }
 
   .work__summary{
-    margin-left: 10%;
-    margin-right: 10%;
     margin-bottom: 3rem;
-    text-align: justify;
-  }
+    max-width: 1120px;
+    margin-inline: auto;
+    }
   
   .work__link{
     padding: 3rem 3rem 2rem;
